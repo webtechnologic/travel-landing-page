@@ -1,17 +1,11 @@
-
-/*@import url('https://fonts.googleapis.com/css2?family=Magra:wght@700&display=swap'); /*font-family: 'Magra', sans-serif;*/
 @import url('https://fonts.googleapis.com/css2?family=Magra:wght@400;700&display=swap'); /*font-family: 'Magra', sans-serif; */
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;500&display=swap'); /*font-family: 'Red Hat Text', sans-serif;*/
 @import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,400;0,700;1,300;1,400;1,700&display=swap'); /*font-family: 'Aleo', serif;*/
-/*@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap'); /* font-family: 'Montserrat', sans-serif; */
-/*@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap'); /* font-family: 'Work Sans', sans-serif; */ 
-
 
 html {
     scroll-behavior: smooth; 
     overflow-x: hidden;
     height: 100%;
-    
 }
 
 :root {   
@@ -19,9 +13,6 @@ html {
      --color-white: #FFFFFF;
      --color-orange: #F2785C;
     --color-grey: #E5E5E5;
-    /*--color-blue: #0158F8;
-    --icon-filter: invert(0%);
-    --icon-filter-hover: invert(51%) sepia(0%) saturate(0%) hue-rotate(358deg) brightness(99%) contrast(97%);      */
 }
 
 * {
@@ -41,12 +32,7 @@ body {
     font-size: 17px;
     color: var(--color-white);
     background: var(--color-grey);
-    
-    /*letter-spacing: 1.1%;
-    background-color: var(--color-dark-blue);
-           */
 }  
-
 
 
 .container {
@@ -97,13 +83,25 @@ header{
     position: relative;
     left: 0;
     top: 0;
-    
 }
 
 .wrapper-logo {
     display: flex;
     gap: 6px;
 }
+
+.wrapper-logo > img {
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.wrapper-logo > img:hover {
+    filter: invert(28%) sepia(14%) saturate(4314%) hue-rotate(151deg) brightness(92%) contrast(90%);
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+
 .wrapper-logo p {
     font-family: 'Magra', sans-serif;
     font-weight: 600;
@@ -126,7 +124,7 @@ header{
     padding-right: 32px; 
 }
 
-.menu-list-nav li a, .link-list li a {
+.menu-list-nav li a {
     color: var(--color-white);
     text-decoration: none;  
     transition: color 0.3s ease-in;  
@@ -199,7 +197,6 @@ input[type="search"]::-moz-placeholder {
     left: 646px;
     top: 18px;
     line-height: 32px;
-    /* letter-spacing: 0.03em; */
 }
 
 /* Steps ========================================================================*/
@@ -249,6 +246,13 @@ h2 {
     height: 154px;
 }  
 
+.wrapper-steps-block:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+    filter: drop-shadow(0px 4px 4px #0D606F);    
+}
+
 .wrapper-steps-block div {
     background: var(--color-orange);
     width: 100px;
@@ -257,7 +261,6 @@ h2 {
     margin: 0 auto;
     position: relative;
 }
-
 
 .wrapper-steps-block div img {
     position: absolute;
@@ -273,7 +276,6 @@ h2 {
     top: 28%;
     left: 21%;
 }
-
 
 .wrapper-steps-block p {
     margin-top: 30px;
@@ -292,7 +294,6 @@ h2 {
     overflow: hidden;
     padding-bottom: 5px;
     background: var(--color-white);
-    
 }
 
 .wrapper-destinations {
@@ -349,7 +350,6 @@ h2 {
     margin-top: 40px;
     font-size: 24px;
     line-height: 32px;
-    /* letter-spacing: 0.025em; */
     align-items: center;
     justify-content: center;
     gap: 13px;
@@ -363,13 +363,10 @@ h2 {
 /* Stories ========================================================================*/
 
 .stories {
-    padding-top: 75px; /* margin-top */
-    /* background: rgba(255, 255, 255, 0.7);    */
+    padding-top: 75px; 
     padding-bottom: 40px;    
     background: linear-gradient(to bottom, #FFFFFF 11.6%, rgba(255, 255, 255, 0.7) 0%);
 }
-
-
 
 .wrapper-travel-stories {
     margin-top: 40px;
@@ -377,9 +374,6 @@ h2 {
     display: flex;
     flex-direction: column;
     gap: 25px;
-   
-    
-    
 }
 
 .wrapper-travel-stories-block {
@@ -410,9 +404,21 @@ h3 {
     font-weight: 700;
 }
 
+.wrapper-travel-stories-block > div > p > a:hover {
+    color: var(--color-orange);
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+}
+
 .wrapper-travel-stories-block > div > img {
     filter: drop-shadow(0px 4px 4px #0D606F);
     border-radius: 16px;
+}
+
+.wrapper-travel-stories-block > div > img:hover {
+    transform: scale(1.02);
+    transition: all 0.3s ease-in;
+    cursor: pointer;    
 }
 
 .stories > button {
@@ -423,11 +429,9 @@ h3 {
     margin-top: 35px;
     font-size: 24px;
     line-height: 32px;
-    /* letter-spacing: 0.025em; */
     align-items: center;
     justify-content: center;
     gap: 13px;
-    /* margin-bottom: 40px; */
 }
 
 .stories > button:hover {
@@ -441,7 +445,6 @@ h3 {
     background-position: center 168px;
     background-size: contain;
     background-repeat: no-repeat;
-   
 }
 
 footer {
@@ -451,7 +454,6 @@ footer {
    align-items: center;
    justify-content: center;
    position: relative;
-  
 }
 
 footer > p {
@@ -459,6 +461,8 @@ footer > p {
     font-weight: 500;
     font-size: 16px;
     line-height: 21px;
+    margin-top: 3px;
+    margin-left: 1px;
 }
 
 footer > ul {
@@ -468,13 +472,24 @@ footer > ul {
     position: absolute;
     right: 122px;
     top: 17px;
- }
-
+}
 
 footer > ul > li > a {
     background-size: contain;
     background-repeat: no-repeat;
     display: block;
+}
+
+.rsschool {
+    background-image: url('assets/svg/rs-school.svg');
+    width: 75px;
+    height: 30px;
+}
+
+.github {
+    background-image: url('assets/svg/github.svg');
+    width:30.85px;
+    height: 30.85px;
 }
 
 .instagram {
@@ -495,12 +510,6 @@ footer > ul > li > a {
 
 footer > ul > li:hover {
     cursor: pointer;
-    transition: 0.5s;
-    /* filter: invert(61%) sepia(10%) saturate(2342%) hue-rotate(323deg) brightness(90%) contrast(112%); */
+    transition: all 0.3s ease-in;
     filter: invert(40%) sepia(20%) saturate(2000%) hue-rotate(323deg) brightness(90%) contrast(112%);
-
-}    
-
-
-
-
+}   
